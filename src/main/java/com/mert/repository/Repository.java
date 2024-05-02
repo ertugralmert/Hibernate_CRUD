@@ -25,6 +25,10 @@ public class Repository<T, ID> implements IRepository<T, ID> {
         em = emf.createEntityManager();
         this.t = entity;
     }
+    private void openSS(){ // sorgularda bu method session açacak.
+        if(!em.isOpen())
+            em = emf.createEntityManager();
+    }
 
     private void openSession(){
         em = emf.createEntityManager();
@@ -60,6 +64,7 @@ public class Repository<T, ID> implements IRepository<T, ID> {
 
     @Override
     public Optional<T> findById(ID id) {
+        openSS();
         CriteriaBuilder criteriaBuilder = em.getCriteriaBuilder();
         CriteriaQuery<T> criteriaQuery =(CriteriaQuery<T>) criteriaBuilder.createQuery(t.getClass());
         Root<T> root =(Root<T>) criteriaQuery.from(t.getClass());
@@ -76,6 +81,7 @@ public class Repository<T, ID> implements IRepository<T, ID> {
 
     @Override
     public boolean existsById(ID id) {
+        openSS();
         CriteriaBuilder criteriaBuilder = em.getCriteriaBuilder();
         CriteriaQuery<T> criteriaQuery =(CriteriaQuery<T>) criteriaBuilder.createQuery(t.getClass());
         Root<T> root = (Root<T>) criteriaQuery.from(t.getClass());
@@ -91,6 +97,7 @@ public class Repository<T, ID> implements IRepository<T, ID> {
 
     @Override
     public List<T> findAll() {
+        openSS();
         CriteriaBuilder criteriaBuilder = em.getCriteriaBuilder();
         CriteriaQuery<T> criteriaQuery = (CriteriaQuery<T>) criteriaBuilder.createQuery(t.getClass());
         Root<T> root = (Root<T>) criteriaQuery.from(t.getClass());
@@ -100,6 +107,7 @@ public class Repository<T, ID> implements IRepository<T, ID> {
 
     @Override
     public List<T> findByColumnAndValue(String columnName, Object value) {
+        openSS();
         CriteriaBuilder criteriaBuilder = em.getCriteriaBuilder();
         CriteriaQuery<T> criteriaQuery = (CriteriaQuery<T>) criteriaBuilder.createQuery(t.getClass());
         Root<T> root =(Root<T>) criteriaQuery.from(t.getClass());
@@ -135,6 +143,7 @@ public class Repository<T, ID> implements IRepository<T, ID> {
 
     @Override
     public List<T> findAllByEntity(T entity) {
+        openSS();
         List<T> result;
         Class<?> clazz = entity.getClass();
         Field[] fields = clazz.getDeclaredFields();
