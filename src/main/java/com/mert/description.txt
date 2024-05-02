@@ -1,0 +1,22 @@
+
+- Öncelikle depencies kısmına ekleme yaptık. Maven sitesinden gerekli bağlantıları aldık.
+    Bunlar:
+            Postgre SQL:
+                implementation group: 'org.postgresql', name: 'postgresql', version: '42.7.3'
+            Hibernate:
+               implementation group: 'org.hibernate.orm', name: 'hibernate-core', version: '6.4.4.Final'
+
+            Lombok:
+               implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.32'
+               annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.32'
+
+            Maven site:   // https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core
+                          // https://mvnrepository.com/artifact/org.postgresql/postgresql
+                         // https://mvnrepository.com/artifact/org.projectlombok/lombok
+                        // https://mvnrepository.com/artifact/org.projectlombok/lombok
+
+    Repository package oluşturup içine IRepostiroy-> interface class & Repository extend class oluşturuldu.
+
+
+
+->>> Silme işlemleri genellik ID ile yapılır*
