@@ -1,8 +1,6 @@
 
 <
 build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
-W
-'src/main/java/com/mert/Description.java,b/7/b71cf3c8f68882209befa93380ac59beb62b89be
 V
 &src/main/java/com/mert/description.txt,0/a/0a00280ccb00a0215e58eb279deb4a45e5e0cd71
 R
@@ -28,8 +26,6 @@ S
 Q.idea/sonarlint/securityhotspotstore/f/0/f07866736216be0ee2aba49e392191aeae700a35,2/5/25f6469773b9f3ebb994178c1114a60412389f58
 ]
 -.idea/sonarlint/securityhotspotstore/index.pb,8/8/88a9255124c95bdc913197c120a8d560edc59c8e
-
-Q.idea/sonarlint/securityhotspotstore/b/7/b71cf3c8f68882209befa93380ac59beb62b89be,4/7/4718d9335765ae42abab8952d2f839e5f3c44fe5
 w
 G.idea/sonarlint/issuestore/0/a/0a00280ccb00a0215e58eb279deb4a45e5e0cd71,b/8/b8c89082825cfa842892c2e2cc8c7d95a6c51368
 X
